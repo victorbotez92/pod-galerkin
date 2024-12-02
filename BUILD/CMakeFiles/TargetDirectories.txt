@@ -1,0 +1,10 @@
+/gpfs/users/botezv/POD_GALERKIN_magnetic/BUILD/CMakeFiles/rebuild_cache.dir
+/gpfs/users/botezv/POD_GALERKIN_magnetic/BUILD/CMakeFiles/release.dir
+/gpfs/users/botezv/POD_GALERKIN_magnetic/BUILD/CMakeFiles/debug.dir
+/gpfs/users/botezv/POD_GALERKIN_magnetic/BUILD/CMakeFiles/native.dir
+/gpfs/users/botezv/POD_GALERKIN_magnetic/BUILD/CMakeFiles/a.exe.dir
+/gpfs/users/botezv/POD_GALERKIN_magnetic/BUILD/CMakeFiles/edit_cache.dir
+/gpfs/users/botezv/SFEMaNS_GIT/SFEMaNS_DEV/LIBS/CMakeFiles/rebuild_cache.dir
+/gpfs/users/botezv/SFEMaNS_GIT/SFEMaNS_DEV/LIBS/CMakeFiles/edit_cache.dir
+/gpfs/users/botezv/SFEMaNS_GIT/SFEMaNS_DEV/LIBS/CMakeFiles/sfemans_lib_C.dir
+/gpfs/users/botezv/SFEMaNS_GIT/SFEMaNS_DEV/LIBS/CMakeFiles/sfemans_lib_F.dir

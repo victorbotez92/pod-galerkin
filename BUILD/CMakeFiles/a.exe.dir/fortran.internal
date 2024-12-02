@@ -1,0 +1,11 @@
+# The fortran modules provided by this target.
+provides
+ boundary_generic_module@boundary_generic.smod
+ fft_dr.mod
+ initialization.mod
+ pdf.mod
+ pod_galerkin.mod
+ pod_galerkin_mag.mod
+ projections.mod
+ user_data.mod
+ user_data_module.mod

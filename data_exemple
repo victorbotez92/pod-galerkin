@@ -1,0 +1,307 @@
+===Is mesh file formatted (true/false)?
+.t.
+===Directory and name of mesh file
+'/home/botezv/APPLICATIONS_SFEMaNS_GIT/LES_VKS_TM73/MESHES' 'mesh_005_02_2_ext3_sym.FEM'
+!==========================================================================
+!          Mesh symmetry
+!==========================================================================
+===Is the mesh symmetric (true/false)?
+.t.
+===Number of processors in meridian section
+3
+===Number of processors in Fourier space
+64
+===Number of Fourier modes
+64
+===Select Fourier modes? (true/false)
+.f.
+===List of Fourier modes (if select_mode=.TRUE.)
+0
+===Problem type: (nst, mxw, mhd, fhd)
+'mhd'
+===Solve Navier-Stokes with u (true) or m (false)?
+.t.
+===Restart on magnetic field (true/false)
+.f.
+===Restart on velocity (true/false)
+.t.	   
+===Do we read metis partition? (true/false)
+.t.
+===Restart on LES (true/false)
+.f.
+===Time step and number of time iterations
+0.00125d0 8321
+0.00125d0 5024
+0.00125d0 10048
+0.00125d0 5024 ! 5024_it = 1 turn  since  6.28 = time_one_turn (omega=1.0) 
+
+!=============================================================================
+!          Data for post processing
+!=============================================================================
+!===Number of planes in real space for Visualization
+!127
+===Frequency to write energies
+157
+===Should I do post proc init? (true/false)
+.f.
+===Frequency to create plots
+-1
+100000
+1 500000  4800
+===Frequency to write restart file
+157
+157   !save 32 restarts every turn
+628   !save 8 restarts every turn
+===Frequency to write time avg restart file
+5000024   !save 4 restarts every  turn
+===Just postprocessing without computing? (true/false)
+.f.
+!===Number of iterations processed for DR
+!1
+===Starting index for post processing DR
+4
+===Ending index for post processing DR
+4
+===Read time average info? (true/false)
+.f.
+===Should we plot 3D DR
+.f.
+===Should we plot modes DR
+.f.
+===Should we compute DRM again
+.f.
+
+============================================
+              Mesh-NAVIER-STOKES
+============================================
+===Number of subdomains in Navier-Stokes mesh
+4
+===List of subdomains for Navier-Stokes mesh
+1 2 5 7
+
+============================================
+              Dynamics-NAVIER-STOKES
+============================================
+===Reynolds number
+1500.d0
+===Coefficient for penalty of divergence in NS?
+1.d0
+============================================
+              BCs-NAVIER-STOKES
+============================================
+===How many boundary pieces for full Dirichlet BCs on velocity?
+2
+===List of boundary pieces for full Dirichlet BCs on velocity
+10 4
+===How many boundary pieces for Dirichlet BCs on pressure?
+0
+===List of boundary pieces for Dirichlet BCs on pressure
+0
+
+=============================================
+             Impose Velocity
+=============================================
+===Use penalty in NS domain (true/false)?
+.t.
+===Use nonzero velocity in solids (true/false)?
+.t.
+===Imposed Velocity
+1.d0 1.d0
+===Compute z momentum (true/false)?
+.t.	   
+
+============================================
+              Anemometers for v
+============================================
+===Anemometers (v) ? (true/false)
+.f.
+===Number of anemo_v (r,z)
+3 5
+===List of r anemo_v
+0.25d0 0.5d0 0.90d0
+===List of z anemo_v
+-0.65d0 -0.35d0 0.d0 0.35d0 0.65d0
+
+============================================
+              Solver-velocity-NAVIER-STOKES
+============================================
+===Maximum number of iterations for velocity solver
+100
+===Relative tolerance for velocity solver
+1.d-6
+===Absolute tolerance for velocity solver
+1.d-10
+===Velocity solver verbose? (true/false)
+.f.
+===Solver type for velocity (FGMRES, CG, ...)
+GMRES
+===Preconditionner type for velocity solver (HYPRE, JACOBI, MUMPS...)
+MUMPS
+
+============================================
+              Solver-pressure-NAVIER-STOKES
+============================================
+===Maximum number of iterations for pressure solver
+100
+===Relative tolerance for pressure solver
+1.d-6
+===Absolute tolerance for pressure solver
+1.d-10
+===Pressure solver verbose? (true/false)
+.f.
+===Solver type for pressure (FGMRES, CG, ...)
+GMRES
+===Preconditionner type for pressure solver (HYPRE, JACOBI, MUMPS...)
+MUMPS
+
+============================================
+              Solver-mass-NAVIER-STOKES
+============================================
+===Maximum number of iterations for mass matrix solver
+100
+===Relative tolerance for mass matrix solver
+1.d-6
+===Absolute tolerance for mass matrix solver
+1.d-10
+===Mass matrix solver verbose? (true/false)
+.f.
+===Solver type for mass matrix (FGMRES, CG, ...)
+CG
+===Preconditionner type for mass matrix solver (HYPRE, JACOBI, MUMPS...)
+MUMPS
+
+============================================
+              Verbose (diagnostics)
+============================================
+===Verbose timing? (true/false)
+.t.
+===Verbose divergence? (true/false)
+.t.
+===Verbose CFL? (true/false)
+.t.
+===Check numerical stability (true/false)
+.t.
+
+============================================
+              H-MAXWELL
+============================================
+===Solve Maxwell with H (true) or B (false)?
+.f.
+===Number of subdomains in magnetic field (H) mesh
+6
+===List of subdomains for magnetic field (H) mesh
+1 2 5 7 8 9
+===Number of interfaces in H mesh
+1
+===List of interfaces in H mesh
+10
+===Number of Dirichlet sides for Hxn
+2
+===List of Dirichlet sides for Hxn
+12 4
+===Is permeability defined analytically (true/false)?
+.t.
+===Use FEM Interpolation for magnetic permeability (true/false)?
+.f.
+===Is permeability variable in theta (true/false)?
+.t.
+===Conductivity in the conductive part (1:nb_dom_H)
+1.d0 1.d0 1.d0 1.d0 1.d0 4.5d0
+===Type of finite element for magnetic field
+2
+===Magnetic Reynolds number
+150.d0
+===Stabilization coefficient (divergence)
+1.d0
+===Stabilization coefficient for Dirichlet H and/or interface H/H
+1.d0
+
+============================================
+              Disk-specifications
+============================================
+===Disk Permeability
+5.d1
+===Disk Geometry: disk_radius, omega_Vol
+0.75d0 6.28318530717958647692d0   ! TM73
+
+0.925d0 7.79114978090268723138d0  ! TM87
+============================================
+              Phi-MAXWELL
+============================================
+===Number of subdomains in magnetic potential (phi) mesh
+0
+============================================
+Solver-MAXWELL
+============================================
+===Maximum number of iterations for Maxwell solver
+100
+===Relative tolerance for Maxwell solver
+1.d-6 
+===Absolute tolerance for Maxwell solver
+1.d-10
+===Maxwell solver verbose? (true/false)
+.f.
+===Solver type for Maxwell (FGMRES, CG, ...)
+GMRES
+===Preconditionner type for Maxwell solver (HYPRE, JACOBI, MUMPS...)
+MUMPS
+
+!=============================================================================
+!          Data for POD GALERKING
+!=============================================================================
+
+===Starting index for I
+0
+===Ending index for I
+10
+======Is it a restart ? (true/false)
+.f.
+! restart option : restart from "binaries" is false (default), the restart will be on "suites" files. 
+===Should we restart from "binaries" file (true/false)
+.t.
+===Folder where to put/get binaries
+'/gpfs/workdir/botezv/MY_APPLICATIONS_SFEMaNS_GIT/LES_VKS_TM73/RUNS/Runs_SFeMANS/Re1500_Rm300_mu1/rep_all/ns/PODs_out/gather_208_224_256_304_320_336/bins_pod/binaries_out/'
+
+===Should we do Galerkin with magnetic field ?
+.f.
+
+===How are the magnetic POD called ?
+'BPOD'
+
+===Should we do Galerkin with velocity field ?
+.t.
+
+===Specific field name
+'uPOD'
+
+===Name of file containing all info of fields
+'data_for_suites'
+
+! Set to true to shorten calculations by not calculating the terms which we know in advance will be null due to their symmetry
+===Should we Rpi-symmetrize (true/false) 
+.t.
+
+!Select which fields are done, for now it is exclusive options
+! default to 'u' if u and B are .t.
+===Should we do it for u (true/false)
+.t.
+===Should we do it for p (true/false)
+.f.
+===Should we do it for B (true/false)
+.t.
+
+===Should we do it from the data_for_suites file (true/false)
+.t.
+
+
+!Sets the boundaries for the filtering (should be the same as the ones for the simulation)
+===How many boundary pieces for Dirichlet BCs for DR
+2
+===List of boundary pieces for Dirichlet BCs for DR
+10 4
+===How many boundary pieces for Dirichlet BCs for DR_MHD?
+2
+===List of boundary pieces for Dirichlet BCs for DR_MHD
+12 4
+
+!END OF COPY, PASTE AND MODIFY
